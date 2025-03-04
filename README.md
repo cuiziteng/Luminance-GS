@@ -2,4 +2,7 @@
 
 **2025.2.27 :** Paper accepted by **CVPR 2025** !
 
-
+<div align="center">
+  <img src="./pics/luminance_gs_logo.jpg" height="360">
+</div>
+</p>
