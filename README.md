@@ -18,7 +18,7 @@
 The taste was sweeter
 \
 The nights of wonder.
-With friends surrounded. "
+With friends surrounded."
 \
                       -- Pink Floyd (High Hopes)***
 <br/>
