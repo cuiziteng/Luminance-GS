@@ -13,3 +13,13 @@
 
 <sup>1.</sup>The University of Tokyo, <sup>2.</sup>RIKEN AIP.
 
+<br/>
+
+***" The light was brighter
+The taste was sweeter
+The nights of wonder
+With friends surrounded. "
+\
+                      -- Pink Floyd (High Hopes)***
+
+<br/>
