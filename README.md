@@ -17,7 +17,7 @@
 <br/>
 
 ***" The light was brighter.
-The taste was sweeter
+The taste was sweeter.
 \
 The nights of wonder.
 With friends surrounded."
