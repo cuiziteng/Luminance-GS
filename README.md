@@ -15,10 +15,10 @@
 
 <br/>
 
-***" The light was brighter
+***" The light was brighter.
 The taste was sweeter
 \
-The nights of wonder
+The nights of wonder.
 With friends surrounded. "
 \
                       -- Pink Floyd (High Hopes)***
