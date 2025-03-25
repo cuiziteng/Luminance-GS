@@ -22,7 +22,7 @@ The taste was sweeter
 The nights of wonder.
 With friends surrounded."
 \
-                      -- Pink Floyd (Lost For Words)***
+                      -- Pink Floyd (High Hopes)***
 
 <br/>
 
