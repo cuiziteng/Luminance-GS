@@ -6,3 +6,10 @@
   <img src="./pics/logo.jpg" height="300">
 </div>
 </p>
+
+[Ziteng Cui<sup>1</sup>](https://cuiziteng.github.io/), 
+[Xuangeng Chu<sup>1</sup>](https://xg-chu.site/), 
+[Tatsuya Harada<sup>1,2</sup>](https://www.mi.t.u-tokyo.ac.jp/harada/). 
+
+<sup>1.</sup>The University of Tokyo, <sup>2.</sup>RIKEN AIP.
+
