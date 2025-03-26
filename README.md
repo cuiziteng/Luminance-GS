@@ -16,13 +16,9 @@
 
 <br/>
 
-***" The light was brighter.
-The taste was sweeter.
+***"The straight line belongs to men, the curved line belongs to God"
 \
-The nights of wonder.
-With friends surrounded."
-\
-&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; -- Pink Floyd (High Hopes)***
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; -- Antoni Gaudi***
 
 <br/>
 
