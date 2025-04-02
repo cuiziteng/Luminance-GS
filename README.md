@@ -2,7 +2,7 @@
 
 [(Paper Link)](https://github.com/cuiziteng/Luminance-GS/tree/main/papers), [(Website Link)](https://cuiziteng.github.io/Luminance_GS_web/).
 
-**2025.2.27 :** Paper accepted by **CVPR 2025** !
+**2025.2.27 :** Paper accepted by **CVPR 2025** ! Code would be released in Mid April.
 
 <div align="center">
   <img src="./pics/logo.jpg" height="300">
