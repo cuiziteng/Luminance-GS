@@ -45,17 +45,17 @@ cd examples
 2.
 For LOM dataset low-light ("buu" scene for example):
 ```
-python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save weights and results)
+python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save weights and results)
 ```
 
 For LOM dataset over-exposure ("buu" scene for example):
 ```
-python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights and results)
+python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights and results)
 ```
 
-For LOM dataset over-exposure ("buu" scene for example):
+For LOM dataset over-exposure ("bicycle" scene for example):
 ```
-python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights and results)
+python simple_trainer_ours.py --data_dir ../data/NeRF_360/bicycle --exp_name variance --data_factor 8 --result_dir (place you save weights and results)
 ```
 
 ### ☀️: Model Evaluation:
