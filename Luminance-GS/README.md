@@ -1,3 +1,11 @@
+<br/>
+
+***"The straight line belongs to men, the curved line belongs to God"
+\
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;-- Antoni Gaudi***
+
+<br/>
+
 ### ☀️: Enviroment setup (follow [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
 
 Clone our project and then install ***Pytorch*** first and then:
