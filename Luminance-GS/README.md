@@ -16,10 +16,16 @@ Then datasets should be set up as (under this folder):
 
 ```
 -- Luminance-GS
-    -- LOM_full (For NVS under low-light and overexposure)
-        -- bike
-        -- buu
-        -- chair
-        -- shrub
-        -- sofa 
+    -- data
+        -- LOM_full (For NVS under low-light and overexposure)
+            -- bike
+            -- buu
+            -- chair
+            -- shrub
+            -- sofa
+        -- NeRF_360 (For NVS under vary-exposure)
+            -- bicycle
+            -- bonsai
+            -- counter
+            -- ... (total 7 scenes)
 ```
