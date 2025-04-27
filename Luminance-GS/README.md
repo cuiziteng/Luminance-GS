@@ -12,4 +12,14 @@ For **MipNeRF360-varying** dataset, please download from [g-drive link (8.47GB)]
 
 ***Note***: MipNeRF360-varying is a synthesized dataset based on [MipNeRF360 dataset](https://jonbarron.info/mipnerf360/), featuring 360° views and inconsistent lighting across images, making NVS more challenging.
 
+Then datasets should be set up as (under this folder):
 
+```
+-- Luminance-GS
+    -- LOM_full (For NVS under low-light and overexposure)
+        -- bike
+        -- buu
+        -- chair
+        -- shrub
+        -- sofa 
+```
