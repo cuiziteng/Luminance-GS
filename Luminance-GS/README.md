@@ -45,17 +45,17 @@ cd examples
 2.
 For LOM dataset low-light ("buu" scene for example):
 ```
-python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save weights and results)
+python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save weights & results)
 ```
 
 For LOM dataset over-exposure ("buu" scene for example):
 ```
-python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights and results)
+python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights & results)
 ```
 
 For LOM dataset over-exposure ("bicycle" scene for example):
 ```
-python simple_trainer_ours.py --data_dir ../data/NeRF_360/bicycle --exp_name variance --data_factor 8 --result_dir (place you save weights and results)
+python simple_trainer_ours.py --data_dir ../data/NeRF_360/bicycle --exp_name variance --data_factor 8 --result_dir (place you save weights & results)
 ```
 
 ### ☀️: Model Evaluation:
@@ -67,6 +67,14 @@ For the model evaluation, we provide the pretrained weights and rendering result
 |  ---- |  ---- | ---- | ---- | ----  | 
 |  [G-drive](https://drive.google.com/file/d/1Za6WbdZyMfJYPTziDvJj-hmLpQ5sh7TD/view?usp=sharing) | [G-drive](https://drive.google.com/file/d/1bF-tKc_UYRYfRcMvsoe4BzzKmnFVvbPM/view?usp=sharing)  | [G-drive](https://drive.google.com/file/d/1ON4rWEeU578axI5aMbXDFvWig17HO7gh/view?usp=sharing) | [G-drive](https://drive.google.com/file/d/1fkpVjBlsbT4PX73rhYixwig8XUIReg3t/view?usp=sharing)  |  [G-drive](https://drive.google.com/file/d/1MJK-FX3qDDwyj3fXskTFp_Bca-RNRTok/view?usp=sharing) |
 |  [百度云(密码 1111)](https://pan.baidu.com/s/1BxaKkQ_7vr1A_AbLFhoYAg)   | [百度云(密码 1111)](https://pan.baidu.com/s/1X8ysXnO4MFGJP_bpPjtmYQ)  | [百度云(密码 1111)](https://pan.baidu.com/s/1wHdbB4GJ9zfixf2NUnijyA) |  [百度云(密码 1111)](https://pan.baidu.com/s/1jflRw246RPwNAgqhpDx2_w) |  [百度云(密码 1111)](https://pan.baidu.com/s/1WbQ1tcJP1xg3F-fdRK-Saw) |
+
+
+Compare to the training code, directly add the ckpt file provided in above links to make evaluation:
+
+LOM dataset low-light "buu" scene for example:
+```
+python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save results) --ckpt (place of weights)
+```
 
 
 ### ☀️: Notice and Others:
