@@ -39,8 +39,8 @@ For the model evaluation, we provide the pretrained weights and rendering result
 
 | LOM (low-light) | LOM (overexposure) | MipNeRF360-varying 1 | MipNeRF360-varying 2 | MipNeRF360-varying 3 | 
 |  ---- |  ---- | ---- | ---- | ----  | 
-|  [G-drive][https://drive.google.com/file/d/1Za6WbdZyMfJYPTziDvJj-hmLpQ5sh7TD/view?usp=sharing] | (G-drive)[https://drive.google.com/file/d/1bF-tKc_UYRYfRcMvsoe4BzzKmnFVvbPM/view?usp=sharing]  | (G-drive)[https://drive.google.com/file/d/1ON4rWEeU578axI5aMbXDFvWig17HO7gh/view?usp=sharing] | (G-drive)[https://drive.google.com/file/d/1fkpVjBlsbT4PX73rhYixwig8XUIReg3t/view?usp=sharing]  |  (G-drive)[https://drive.google.com/file/d/1MJK-FX3qDDwyj3fXskTFp_Bca-RNRTok/view?usp=sharing] |
-|  (百度云)[]   | (百度云)[]  | (百度云)[] |  (百度云)[] |  (百度云)[] |
+|  [G-drive](https://drive.google.com/file/d/1Za6WbdZyMfJYPTziDvJj-hmLpQ5sh7TD/view?usp=sharing) | [G-drive](https://drive.google.com/file/d/1bF-tKc_UYRYfRcMvsoe4BzzKmnFVvbPM/view?usp=sharing)  | [G-drive](https://drive.google.com/file/d/1ON4rWEeU578axI5aMbXDFvWig17HO7gh/view?usp=sharing) | [G-drive](https://drive.google.com/file/d/1fkpVjBlsbT4PX73rhYixwig8XUIReg3t/view?usp=sharing)  |  [G-drive](https://drive.google.com/file/d/1MJK-FX3qDDwyj3fXskTFp_Bca-RNRTok/view?usp=sharing) |
+|  [百度云, 密码 1111](https://pan.baidu.com/s/1BxaKkQ_7vr1A_AbLFhoYAg)   | [百度云]()  | [百度云]() |  [百度云]() |  [百度云]() |
 
 
 
