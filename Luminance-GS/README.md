@@ -29,3 +29,15 @@ Then datasets should be set up as (under this folder):
             -- counter
             -- ... (total 7 scenes)
 ```
+
+### 📖: Model Training:
+
+
+
+### 📖: Model Evaluation:
+For the model evaluation, we provide the pretrained weights in G-drive and BaiduYun(百度云网盘) as follow:
+
+
+
+
+
