@@ -24,8 +24,17 @@
 
 <br/>
 
-## Use The Code:
+### Use The Code:
 
 ```
 cd Luminance-GS
+```
+
+### Citation:
+```
+ @inproceedings{cui_luminance_gs,
+		  title = {Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment},
+		  author = {Ziteng Cui and Xuangeng Chu and Tatsuya Harada},
+		  booktitle={CVPR},
+		  year={2025}}
 ```
