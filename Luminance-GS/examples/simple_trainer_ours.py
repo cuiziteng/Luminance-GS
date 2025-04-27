@@ -62,7 +62,7 @@ class Config:
     exp_name: str = "low"   # Switch Conditions Here. overexposure: str = "over_exp"; varying exposure: str = "variance"
     
     # Downsample factor for the dataset
-    data_factor: int = 8    # data_factor 8 for Mip360 dataset
+    data_factor: int = 1    # data_factor 8 for Mip360 dataset
     # Directory to save results
     result_dir: str = "results_mip360_nu/ours/bicycle"
     # Every N images there is a test image
