@@ -16,14 +16,6 @@
 <sup>1.</sup>The University of Tokyo, <sup>2.</sup>RIKEN AIP.
 
 
-<br/>
-
-***"The straight line belongs to men, the curved line belongs to God"
-\
-&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;-- Antoni Gaudi***
-
-<br/>
-
 ### Use The Code:
 
 ```
