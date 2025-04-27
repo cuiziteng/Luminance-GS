@@ -62,7 +62,7 @@ class Config:
     # Downsample factor for the dataset
     data_factor: int = 1    # data_factor 8 for Mip360 dataset
     # Directory to save results
-    result_dir: str = "results_mip360_nu/ours/bicycle"
+    result_dir: str = "results_low/ours/bike"
     # Every N images there is a test image
     test_every: int = 8
     # Random crop size for training  (experimental)
