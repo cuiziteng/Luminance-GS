@@ -37,7 +37,9 @@ Then datasets should be set up as (under this folder):
 ### ☀️: Model Evaluation:
 For the model evaluation, we provide the pretrained weights in G-drive and BaiduYun(百度云网盘) as follow:
 
-
+| LOM (low-light) | LOM (overexposure) | MipNeRF360-varying 1 | MipNeRF360-varying 2 | MipNeRF360-varying 3 | 
+|  ---- |  ---- | ---- | ---- | ----  | 
+|     |   |  |   |   |
 
 
 
