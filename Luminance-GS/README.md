@@ -1,4 +1,7 @@
-### ☀️: Enviroment setup (based on [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
+### ☀️: Enviroment setup (follow [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
+
+Clone our project and then:
+
 ```
 pip install git+https://github.com/nerfstudio-project/gsplat.git
 ```
