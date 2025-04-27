@@ -1,9 +1,9 @@
-### 📖: Enviroment setup (based on [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
+### ☀️: Enviroment setup (based on [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
 ```
 pip install git+https://github.com/nerfstudio-project/gsplat.git
 ```
 
-### 📖: Dataset setup:
+### ☀️: Dataset setup:
 Our Luminance-GS is evluated on 3 datasets (LOM-lowlight, LOM-overexposure and MipNeRF360-varying).
 
 For **LOM** dataset (lowlight and overexposure), please refer to [Aleth-NeRF](https://github.com/cuiziteng/Aleth-NeRF).
@@ -30,11 +30,11 @@ Then datasets should be set up as (under this folder):
             -- ... (total 7 scenes)
 ```
 
-### 📖: Model Training:
+### ☀️: Model Training:
 
 
 
-### 📖: Model Evaluation:
+### ☀️: Model Evaluation:
 For the model evaluation, we provide the pretrained weights in G-drive and BaiduYun(百度云网盘) as follow:
 
 
