@@ -14,9 +14,7 @@ import tqdm
 import tyro
 import viser
 import nerfview
-#from datasets.colmap import Dataset, Parser
-# from datasets.colmap_mip360 import Dataset, Parser
-# from datasets.colmap_mip360 import Dataset, Parser    # Switch Dataset Here
+
 from datasets.traj import generate_interpolated_path
 import torchvision
 from torch import Tensor
