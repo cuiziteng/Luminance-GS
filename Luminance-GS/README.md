@@ -45,4 +45,12 @@ For the model evaluation, we provide the pretrained weights and rendering result
 |  [百度云(密码 1111)](https://pan.baidu.com/s/1BxaKkQ_7vr1A_AbLFhoYAg)   | [百度云(密码 1111)](https://pan.baidu.com/s/1X8ysXnO4MFGJP_bpPjtmYQ)  | [百度云(密码 1111)](https://pan.baidu.com/s/1wHdbB4GJ9zfixf2NUnijyA) |  [百度云(密码 1111)](https://pan.baidu.com/s/1jflRw246RPwNAgqhpDx2_w) |  [百度云(密码 1111)](https://pan.baidu.com/s/1WbQ1tcJP1xg3F-fdRK-Saw) |
 
 
+### ☀️: Notice and Others:
+
+***1***. Directly refer to [thie file](https://github.com/cuiziteng/Luminance-GS/blob/main/Luminance-GS/examples/simple_trainer_ours.py) to check the details of Luminance-GS model structure.
+
+***2***. Please note that if you want render a nice video results, you should change rendering views [line 1023 & line 1024 for view and interpolate selection](https://github.com/cuiziteng/Luminance-GS/blob/e963cb1bcd285e5416383a9d034d5e89fb9c0d3a/Luminance-GS/examples/simple_trainer_ours.py#L1023) and [line 1061 for speed](https://github.com/cuiziteng/Luminance-GS/blob/e963cb1bcd285e5416383a9d034d5e89fb9c0d3a/Luminance-GS/examples/simple_trainer_ours.py#L1061).
+
+***3***. We deeply thanks to [GS-Splat](https://github.com/nerfstudio-project/gsplat) for their nice codebase :)
+
 
