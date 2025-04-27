@@ -37,6 +37,12 @@ Then datasets should be set up as (under this folder):
 
 ### ☀️: Model Training:
 
+1. 
+```
+cd examples
+```
+
+2.
 For LOM dataset low-light ("buu" scene for example):
 ```
 python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save weights and results)
