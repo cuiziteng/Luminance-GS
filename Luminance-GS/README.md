@@ -23,8 +23,13 @@ Then datasets should be set up as (under this folder):
             -- chair
             -- shrub
             -- sofa
-        -- NeRF_360 (For NVS under vary-exposure)
+        -- NeRF_360 (For NVS under vary-exposure), we only provide downscale ratio 8 for efficiency
             -- bicycle
+                -- images
+                -- images_8
+                -- images_8_variance
+                -- sparse
+                -- ...
             -- bonsai
             -- counter
             -- ... (total 7 scenes)
@@ -32,7 +37,20 @@ Then datasets should be set up as (under this folder):
 
 ### ☀️: Model Training:
 
+For LOM dataset low-light ("buu" scene for example):
+```
+python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name low --result_dir (place you save weights and results)
+```
 
+For LOM dataset over-exposure ("buu" scene for example):
+```
+python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights and results)
+```
+
+For LOM dataset over-exposure ("buu" scene for example):
+```
+python simple_trainer.py --data_dir ../data/LOM_full/buu --exp_name over_exp --result_dir (place you save weights and results)
+```
 
 ### ☀️: Model Evaluation:
 For the model evaluation, we provide the pretrained weights and rendering results in G-drive and BaiduYun(百度云网盘) as follow:
@@ -51,6 +69,6 @@ For the model evaluation, we provide the pretrained weights and rendering result
 
 ***2***. Please note that if you want render a nice video results, you should change rendering views [line 1023 & line 1024 for view and interpolate selection](https://github.com/cuiziteng/Luminance-GS/blob/e963cb1bcd285e5416383a9d034d5e89fb9c0d3a/Luminance-GS/examples/simple_trainer_ours.py#L1023) and [line 1061 for speed](https://github.com/cuiziteng/Luminance-GS/blob/e963cb1bcd285e5416383a9d034d5e89fb9c0d3a/Luminance-GS/examples/simple_trainer_ours.py#L1061).
 
-***3***. We deeply thanks to [GS-Splat](https://github.com/nerfstudio-project/gsplat) for their nice codebase :)
+***3***. We deeply thanks to [GS-Splat](https://github.com/nerfstudio-project/gsplat) for their nice codebase :).
 
 
