@@ -24,4 +24,8 @@
 
 <br/>
 
-Dataset Link (low-light & overexposure): [LOM Dataset](https://github.com/cuiziteng/Aleth-NeRF).
+## Use The Code:
+
+```
+cd Luminance-GS
+```
