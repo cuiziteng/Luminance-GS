@@ -37,7 +37,7 @@ Then datasets should be set up as (under this folder):
 ### ☀️: Model Evaluation:
 For the model evaluation, we provide the pretrained weights and rendering results in G-drive and BaiduYun(百度云网盘) as follow:
 
-***Note***: Results of MipNeRF360-varying different scenes have been divided into 3 folders because 百度云 requires a paid upload.
+***Note***: Results of MipNeRF360-varying different scenes have been divided into 3 folders because 百度云 requires a paid upload :)
 
 | LOM (low-light) | LOM (overexposure) | MipNeRF360-varying 1 | MipNeRF360-varying 2 | MipNeRF360-varying 3 | 
 |  ---- |  ---- | ---- | ---- | ----  | 
