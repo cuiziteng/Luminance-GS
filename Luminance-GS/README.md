@@ -96,4 +96,22 @@ python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name low --r
 
 ***3***. We deeply thanks to [GS-Splat](https://github.com/nerfstudio-project/gsplat) for their nice codebase :).
 
+### ☀️: Some Great Co-current Works (same direction):
+
+**sRGB-based:** 
+
+PG 2024 [Gaussian in the Dark: Real-Time View Synthesis From Inconsistent Dark Images Using Gaussian Splatting](https://arxiv.org/abs/2408.09130)
+
+IROS 2024 [DarkGS: Learning Neural Illumination and 3D Gaussians Relighting for Robotic Exploration](https://tyz1030.github.io/proj/darkgs.html)
+
+CVPR 2025 [lita-gs: illumination-agnostic novel view synthesis via reference-free 3d gaussian splatting and physical priors](https://arxiv.org/html/2504.00219v1)
+
+Arxiv 2025 [LL-Gaussian: Low-Light Scene Reconstruction and Enhancement via Gaussian Splatting for Novel View Synthesis](https://sunhao242.github.io/LL-Gaussian_web.github.io/)
+
+**RAW-based:**
+
+NIPS 2024 [Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis](https://srameo.github.io/projects/le3d)
+
+NIPS 2024 [From Chaos to Clarity: 3DGS in the Dark](https://arxiv.org/html/2406.08300v1)
+
 
