@@ -33,7 +33,7 @@ cd Luminance-GS
 	  year={2025}}
 ```
 
-### 📖: Some Great Co-current Works (same direction):
+### 📖: Some Great Co-current Works (almost 3DGS in dark):
 
 **sRGB-based:** 
 
