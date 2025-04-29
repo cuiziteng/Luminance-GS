@@ -28,7 +28,7 @@ cd Luminance-GS
 ```
  @inproceedings{cui_luminance_gs,
 	  title = {Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment},
-	  author = {Ziteng Cui and Xuangeng Chu and Tatsuya Harada},
+	  author = {Cui, Ziteng and Chu, Xuangeng and Harada, Tatsuya},
 	  booktitle={CVPR},
 	  year={2025}}
 ```
