@@ -41,12 +41,12 @@ cd Luminance-GS
 
 [IROS 2024] [DarkGS: Learning Neural Illumination and 3D Gaussians Relighting for Robotic Exploration](https://tyz1030.github.io/proj/darkgs.html)
 
-CVPR 2025 [lita-gs: illumination-agnostic novel view synthesis via reference-free 3d gaussian splatting and physical priors](https://arxiv.org/html/2504.00219v1)
+[CVPR 2025] [lita-gs: illumination-agnostic novel view synthesis via reference-free 3d gaussian splatting and physical priors](https://arxiv.org/html/2504.00219v1)
 
-Arxiv 2025 [LL-Gaussian: Low-Light Scene Reconstruction and Enhancement via Gaussian Splatting for Novel View Synthesis](https://sunhao242.github.io/LL-Gaussian_web.github.io/)
+[Arxiv 2025] [LL-Gaussian: Low-Light Scene Reconstruction and Enhancement via Gaussian Splatting for Novel View Synthesis](https://sunhao242.github.io/LL-Gaussian_web.github.io/)
 
 **RAW-based:**
 
-NIPS 2024 [Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis](https://srameo.github.io/projects/le3d)
+[NIPS 2024] [Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis](https://srameo.github.io/projects/le3d)
 
-NIPS 2024 [From Chaos to Clarity: 3DGS in the Dark](https://arxiv.org/html/2406.08300v1)
+[NIPS 2024] [From Chaos to Clarity: 3DGS in the Dark](https://arxiv.org/html/2406.08300v1)
