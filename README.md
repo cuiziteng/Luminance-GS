@@ -37,9 +37,9 @@ cd Luminance-GS
 
 **sRGB-based:** 
 
-PG 2024 [Gaussian in the Dark: Real-Time View Synthesis From Inconsistent Dark Images Using Gaussian Splatting](https://arxiv.org/abs/2408.09130)
+[PG 2024] [Gaussian in the Dark: Real-Time View Synthesis From Inconsistent Dark Images Using Gaussian Splatting](https://arxiv.org/abs/2408.09130)
 
-IROS 2024 [DarkGS: Learning Neural Illumination and 3D Gaussians Relighting for Robotic Exploration](https://tyz1030.github.io/proj/darkgs.html)
+[IROS 2024] [DarkGS: Learning Neural Illumination and 3D Gaussians Relighting for Robotic Exploration](https://tyz1030.github.io/proj/darkgs.html)
 
 CVPR 2025 [lita-gs: illumination-agnostic novel view synthesis via reference-free 3d gaussian splatting and physical priors](https://arxiv.org/html/2504.00219v1)
 
