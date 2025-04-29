@@ -33,6 +33,16 @@ cd Luminance-GS
 	  year={2025}}
 ```
 
+### Dataset Citation:
+```
+@inproceedings{cui_aleth_nerf,
+	  title={Aleth-NeRF: Illumination Adaptive NeRF with Concealing Field Assumption},
+	  author={Cui, Ziteng and Gu, Lin and Sun, Xiao and Ma, Xianzheng and Qiao, Yu and Harada, Tatsuya},
+	  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+	  year={2024}
+}
+```
+
 ### 📖: Some Great Co-current Works (almost 3DGS in dark):
 
 **sRGB-based:** 
