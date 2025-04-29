@@ -43,7 +43,7 @@ cd Luminance-GS
 }
 ```
 
-### 📖: Some Great Co-current Works (almost 3DGS in dark):
+### 📖: Some Also Great Co-current Works (almost 3DGS in dark):
 
 **sRGB-based:** 
 
