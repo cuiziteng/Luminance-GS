@@ -7,7 +7,7 @@
 **2025.4.27 :** Code and dataset released !
 
 <div align="center">
-  <img src="./Luminance-GS/pics/logo.jpg" height="300">
+  <img src="Luminance-GS/pics/logo.jpg" height="300">
 </div>
 </p>
 
