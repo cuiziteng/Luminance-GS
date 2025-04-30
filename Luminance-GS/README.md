@@ -8,7 +8,7 @@
 
 ### ☀️: Enviroment setup (follow [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
 
-Clone our project and then install ***Pytorch*** first and then:
+Clone our project and install ***Python(>=3.9.0)*** and then install ***Pytorch*** first and then:
 
 ```
 pip install gsplat==1.0.0
