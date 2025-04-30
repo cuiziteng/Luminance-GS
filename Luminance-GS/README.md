@@ -19,9 +19,7 @@ cd examples
 ```
 pip install -r requirements.txt
 ```
-```
-pip install numpy==1.24.3 (ensure numpy < 2.0)
-```
+
 
 ### ☀️: Dataset setup:
 Our Luminance-GS is evluated on 3 datasets (LOM-lowlight, LOM-overexposure and MipNeRF360-varying).
