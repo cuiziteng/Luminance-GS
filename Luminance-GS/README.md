@@ -8,6 +8,8 @@
 
 ### ☀️: Enviroment setup (follow [GS-Splat](https://github.com/nerfstudio-project/gsplat)):
 
+Or:
+
 Clone our project and install ***Python(>=3.9.0)*** and then install ***Pytorch*** (we use 1.13.1) first and then:
 
 ```
