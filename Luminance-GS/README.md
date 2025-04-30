@@ -13,7 +13,9 @@ Clone our project and then install ***Pytorch*** first and then:
 ```
 pip install gsplat==1.0.0
 ```
-Then cd examples and:
+```
+cd examples
+```
 ```
 pip install -r requirements.txt
 ```
