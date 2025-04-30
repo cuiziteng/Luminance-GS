@@ -11,8 +11,10 @@ imageio[ffmpeg]
 numpy
 scikit-learn
 tqdm
-torchmetrics[image]
+torchmetrics[image]==1.4.0
 opencv-python
 tyro
 Pillow
-tensorboard
+tensorboard==2.17.0
+matplotlib
+einops
