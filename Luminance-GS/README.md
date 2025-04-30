@@ -101,7 +101,6 @@ python simple_trainer_ours.py --data_dir ../data/LOM_full/buu --exp_name low --r
 
 ***2***. Please note that if you want render a nice video results, you should change rendering views [line 1023 & line 1024 for view and interpolate selection](https://github.com/cuiziteng/Luminance-GS/blob/e963cb1bcd285e5416383a9d034d5e89fb9c0d3a/Luminance-GS/examples/simple_trainer_ours.py#L1023) and [line 1061 for speed](https://github.com/cuiziteng/Luminance-GS/blob/e963cb1bcd285e5416383a9d034d5e89fb9c0d3a/Luminance-GS/examples/simple_trainer_ours.py#L1061).
 
-***3***. We deeply thanks to [GS-Splat](https://github.com/nerfstudio-project/gsplat) for their nice codebase :).
 
 
 
