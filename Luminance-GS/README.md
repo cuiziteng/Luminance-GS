@@ -11,7 +11,11 @@
 Clone our project and then install ***Pytorch*** first and then:
 
 ```
-pip install git+https://github.com/nerfstudio-project/gsplat.git
+pip install gsplat==1.0.0
+```
+Then cd examples and:
+```
+pip install -r requirements.txt
 ```
 
 ### ☀️: Dataset setup:
