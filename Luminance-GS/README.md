@@ -13,7 +13,7 @@ Or:
 Clone our project and install ***Python(>=3.9.0)*** and then install ***Pytorch*** (we use 1.13.1) first and then:
 
 ```
-pip install gsplat
+pip install git+https://github.com/nerfstudio-project/gsplat@v1.0.0
 ```
 ```
 cd examples
