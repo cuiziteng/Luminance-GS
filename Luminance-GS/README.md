@@ -21,6 +21,7 @@ cd examples
 ```
 pip install -r requirements.txt
 ```
+And ensure numpy version < 2.0 (i.e. pip install numpy==1.24.3)
 
 
 ### ☀️: Dataset setup:
