@@ -71,7 +71,7 @@ class HistogramPriorLoss(nn.Module):
         total_loss = curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
 
         if step >= 3000:
-            total_loss = 0.1 * curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
+            total_loss = 0.5 * curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
 
         return total_loss
 
