@@ -77,16 +77,7 @@ class HistogramPriorLoss(nn.Module):
 
 class AdaptiveCurveLoss(nn.Module):
     def __init__(self, alpha=0.2, beta=0.6, low_thresh=0.2, high_thresh=0.6, lambda1=1.0, lambda2=1.0, lambda3=0.1):
-        """
-        自定义损失函数，用于控制曲线的增强和压缩。
-        :param alpha: 控制暗部区域的提升力度 (>1 会增强低光)
-        :param beta: 控制高光区域的抑制力度 (<1 会压缩高光)
-        :param low_thresh: 低光阈值，用于暗部区域分段控制 (默认 0.3)
-        :param high_thresh: 高光阈值，用于高光区域分段控制 (默认 0.7)
-        :param lambda1: 暗部增强损失的权重
-        :param lambda2: 高光抑制损失的权重
-        :param lambda3: 平滑损失的权重
-        """
+        
         super(AdaptiveCurveLoss, self).__init__()
         self.alpha = alpha
         self.beta = beta
