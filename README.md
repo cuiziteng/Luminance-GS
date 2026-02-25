@@ -1,8 +1,8 @@
 # [CVPR 2025] Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment
 
-[(Paper Link)](https://arxiv.org/pdf/2504.01503), [(Website Link)](https://cuiziteng.github.io/Luminance_GS_web/).
+[(Paper Link)](https://arxiv.org/pdf/2504.01503), [(Extended Journal Link)](https://arxiv.org/abs/2602.18322), [(Website Link)](https://cuiziteng.github.io/Luminance_GS_web/).
 
-**2026.2.25 :** The extended version, **Luminance-GS++**, has been released!
+**2026.2.25 :** The extended version, **Luminance-GS++**, has been released, link [here](https://arxiv.org/abs/2602.18322)!
 
 **2025.2.27 :** Paper accepted by **CVPR 2025** ! 
 
