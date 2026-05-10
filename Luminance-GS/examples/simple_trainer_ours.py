@@ -54,15 +54,14 @@ class Config:
     ckpt: Optional[str] = None
 
     # Path to the dataset
-    data_dir: str = "../data/LOM/bike"
-    # data_dir: str = "../data/NeRF_360/bicycle"
+    data_dir: str = "/data/umeiro0/users/cui/data/Multi-illudataset/Scene1/RGB_down4/GT"
 
-    exp_name: str = "low"   # Switch Conditions Here. overexposure: str = "over_exp"; varying exposure: str = "variance"
-    
+    exp_name: str = ""   # Switch Conditions Here. overexposure: str = "over_exp"; varying exposure: str = "variance"
+    method: str = ""   
     # Downsample factor for the dataset
     data_factor: int = 1    # data_factor 8 for Mip360 dataset
     # Directory to save results
-    result_dir: str = "results_low/ours/bike"
+    result_dir: str = "/data/umeiro0/users/cui/data/Multi-illudataset/Scene1/results"
     # Every N images there is a test image
     test_every: int = 8
     # Random crop size for training  (experimental)
@@ -172,10 +171,17 @@ class Config:
 
 cfg = tyro.cli(Config)
 
+# if cfg.exp_name in ["low", "over_exp"]:
+#     from datasets.colmap import Dataset, Parser
+# else:
+#     from datasets.colmap_mip360 import Dataset, Parser
 if cfg.exp_name in ["low", "over_exp"]:
     from datasets.colmap import Dataset, Parser
-else:
+elif cfg.exp_name == "variance":
     from datasets.colmap_mip360 import Dataset, Parser
+else:
+    from datasets.colmap import Dataset, Parser
+    # from datasets.colmap_mip360_WB import Dataset, Parser
 
 
 def create_splats_with_optimizers(
@@ -269,6 +275,7 @@ class Runner:
         self.parser = Parser(
             data_dir=cfg.data_dir,
             exp_name = cfg.exp_name,
+            method = cfg.method,
             factor=cfg.data_factor, # down scale ratio
             normalize=True,
             test_every=cfg.test_every,
@@ -609,7 +616,7 @@ class Runner:
             ssimloss_enh = 1.0 - self.ssim(pixels_enh.permute(0,3,1,2), colors_enh.permute(0,3,1,2))
             loss_regress_enh = l1loss_enh * (1.0 - cfg.ssim_lambda) + ssimloss_enh * cfg.ssim_lambda
             
-            hist_loss = loss_histo(curve_adj, pixels, pesdo_curve, step)
+            hist_loss = loss_histo(curve_adj, pixels, pesdo_curve, step, exp_name=cfg.exp_name)
             
             loss = loss_regress_low + 0.5*loss_regress_enh + loss_co + 10 * hist_loss
             
