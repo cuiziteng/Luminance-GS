@@ -2,6 +2,8 @@
 
 [(Paper Link)](https://arxiv.org/pdf/2504.01503), [(Extended Journal Link)](https://arxiv.org/abs/2602.18322), [(Website Link)](https://cuiziteng.github.io/Luminance_GS_web/).
 
+**2026.5.10 :** Thanks for the open issue, I fixed some bugs in Luminance-GS training.
+
 **2026.2.25 :** The extended version, **Luminance-GS++**, has been released, link [here](https://arxiv.org/abs/2602.18322)!
 
 **2025.2.27 :** Paper accepted by **CVPR 2025** ! 
