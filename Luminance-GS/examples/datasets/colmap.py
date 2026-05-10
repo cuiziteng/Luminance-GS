@@ -34,6 +34,7 @@ class Parser:
         self,
         data_dir: str,
         exp_name: str,
+        method: str,
         factor: int = 1,
         normalize: bool = False,
         test_every: int = 8,
@@ -130,11 +131,7 @@ class Parser:
         # image names anymore.
         
         image_names = [imdata[k].name for k in imdata]
-        # Previous Nerf results were generated with images sorted by filename,
-        # ensure metrics are reported on the same test set.
-        # inds = np.argsort(image_names)
-        # print('image_names', image_names)
-        # print('inds', inds)
+        
         ## Split Train &Test in LOM dataset
         image_train = []
         image_val = []
@@ -143,12 +140,15 @@ class Parser:
         with open(os.path.join(self.data_dir, 'transforms_train.json'), 'r') as f_train:
             contents = json.load(f_train)
             for i in contents['frames']:
+                print('the image train is 0', image_train)
                 image_train.append(i['file_path'].replace('low/',''))
+                
         # Testing IDs in LOM Dataset
         with open(os.path.join(self.data_dir, 'transforms_test.json'), 'r') as f_val:
             contents = json.load(f_val)
             for i in contents['frames']:
                 image_val.append(i['file_path'].replace('high/',''))
+                
         
         id_train = [image_names.index(i) for i in image_train]
         id_val = [image_names.index(i) for i in image_val]
@@ -171,8 +171,12 @@ class Parser:
         colmap_files = sorted(_get_rel_paths(colmap_image_dir))
         image_files = sorted(_get_rel_paths(image_dir))
         colmap_to_image = dict(zip(colmap_files, image_files))
-        
-        image_paths = [os.path.join(image_dir, colmap_to_image[f]) for f in image_names]
+        colmap_to_image_lower = {k.lower(): v for k, v in colmap_to_image.items()}
+
+        image_paths = [
+            os.path.join(image_dir, colmap_to_image.get(f, colmap_to_image_lower[f.lower()]))
+            for f in image_names
+        ]
         
         # 3D points and {image_name -> [point_idx]}
         points = manager.points3D.astype(np.float32)
@@ -286,7 +290,14 @@ class Dataset:
             image = imageio.imread(self.parser.image_paths[index])[..., :3]
             #print(self.parser.image_paths[index])
         else:
-            image = imageio.imread(self.parser.image_paths[index].replace(self.parser.exp_name, 'high'))[..., :3]
+            _high_path = self.parser.image_paths[index].replace(self.parser.exp_name, 'high')
+            if not os.path.exists(_high_path):
+                # fallback: try uppercase extension (e.g. .JPG instead of .jpg)
+                _base, _ext = os.path.splitext(_high_path)
+                _high_path_upper = _base + _ext.upper()
+                if os.path.exists(_high_path_upper):
+                    _high_path = _high_path_upper
+            image = imageio.imread(_high_path)[..., :3]
             # print('the index path is', self.parser.image_paths[index].replace(self.parser.exp_name, 'high'))
             # print('the index path is', self.parser.image_paths[index].replace('low', 'high'))
 
