@@ -2,6 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
+
 def gamma_curve(x, g):
     # Power Curve, Gamma Correction Curve
     y = torch.clamp(x, 1e-3, 1)
@@ -55,15 +57,15 @@ class HistogramPriorLoss(nn.Module):
         flat = input.flatten()
         hist = torch.histc(flat, bins=255, min=0.0, max=1.0)
         cdf = torch.cumsum(hist, dim=0)
-        cdf = cdf / cdf[-1]  
+        cdf = cdf / (cdf[-1] + 1e-8)
         return cdf.unsqueeze(0)  
 
-    def forward(self, output, input, psedo_curve, step):
-        
+    def forward(self, output, input, psedo_curve, step, exp_name=""):
+
         hist_eq_prior = self.compute_histogram_equalization(input)
-        
+
         curve_loss = torch.mean((output - hist_eq_prior) ** 2)
-        
+
         psedo_curve_loss = torch.mean((psedo_curve - output) ** 2) + 0.01 * torch.mean((psedo_curve - hist_eq_prior) ** 2)
 
         smooth_loss = torch.mean((output[:, 1:] - output[:, :-1]) ** 2)
@@ -71,9 +73,69 @@ class HistogramPriorLoss(nn.Module):
         total_loss = curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
 
         if step >= 3000:
-            total_loss = 0.5 * curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
+            w = 0.1 if exp_name == "over_exp" else 0.5
+            total_loss = w * curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
 
         return total_loss
+
+
+
+# class HistogramPriorLoss(nn.Module):
+#     def __init__(self, lambda_smooth=0.1, eps=1e-8, debug=False):
+#         super(HistogramPriorLoss, self).__init__()
+#         self.lambda_smooth = lambda_smooth
+#         self.eps = eps
+#         self.debug = debug
+
+#     def compute_histogram_equalization(self, input):
+#         # Resize and grayscale
+#         input = torch.mean(
+#             nn.functional.interpolate(input.permute(0, 3, 1, 2), scale_factor=0.25),
+#             dim=1
+#         )
+#         flat = input.flatten()
+
+#         # Histogram (no grad)
+#         hist = torch.histc(flat, bins=255, min=0.0, max=1.0)
+#         cdf = torch.cumsum(hist, dim=0)
+#         cdf = cdf / (cdf[-1] + self.eps)  # prevent division by zero
+
+#         return cdf.unsqueeze(0)
+
+#     def forward(self, output, input, psedo_curve, step):
+#         # Safety: remove NaN/Inf
+#         output = torch.nan_to_num(output)
+#         psedo_curve = torch.nan_to_num(psedo_curve)
+
+#         hist_eq_prior = self.compute_histogram_equalization(input).to(output.device).type_as(output)
+
+#         # Loss terms
+#         curve_loss = torch.mean((output - hist_eq_prior) ** 2)
+#         psedo_curve_loss = torch.mean((psedo_curve - output) ** 2) \
+#                          + 0.01 * torch.mean((psedo_curve - hist_eq_prior) ** 2)
+
+#         # Smooth loss only if width > 1
+#         if output.shape[1] > 1:
+#             smooth_loss = torch.mean((output[:, 1:] - output[:, :-1]) ** 2)
+#         else:
+#             smooth_loss = torch.tensor(0.0, device=output.device, dtype=output.dtype)
+
+#         # Total loss
+#         if step >= 3000:
+#             total_loss = 0.5 * curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
+#         else:
+#             total_loss = curve_loss + self.lambda_smooth * smooth_loss + 0.5 * psedo_curve_loss
+
+#         # Debug info
+#         if self.debug:
+#             if torch.isnan(total_loss) or torch.isinf(total_loss):
+#                 print("[Warning] total_loss has NaN/Inf")
+#                 print("curve_loss:", curve_loss.item(), 
+#                       "psedo_curve_loss:", psedo_curve_loss.item(),
+#                       "smooth_loss:", smooth_loss.item())
+
+#         return total_loss
+
 
 class AdaptiveCurveLoss(nn.Module):
     def __init__(self, alpha=0.2, beta=0.6, low_thresh=0.2, high_thresh=0.6, lambda1=1.0, lambda2=1.0, lambda3=0.1):
@@ -105,24 +167,92 @@ class AdaptiveCurveLoss(nn.Module):
 
         return total_loss
 
-# Colour Constancy Loss
-class L_color(nn.Module):
+# class L_color(nn.Module):
 
-    def __init__(self):
+#     def __init__(self):
+#         super(L_color, self).__init__()
+
+#     def forward(self, x):
+        
+#         b,c,h,w = x.shape
+#         para = 2
+        
+#         mean_rgb = torch.mean(x,[1,2],keepdim=True)
+#         mr,mg, mb = torch.split(mean_rgb, 1, dim=-1)
+        
+#         Drg = torch.pow(mr-mg, para)
+#         Drb = torch.pow(mr-mb, para)
+#         Dgb = torch.pow(mb-mg, para)
+#         loss = torch.pow(torch.pow(Drg, para) + torch.pow(Drb, para) + torch.pow(Dgb, para), 1/para)
+
+#         return loss
+
+# Colour Constancy Loss
+# class L_color(nn.Module):
+
+#     def __init__(self, k):
+#         super(L_color, self).__init__()
+#         self.k = k  # control range (1, +∞)
+
+#     def forward(self, x):
+#         print('111', x.shape)
+#         b,c,h,w = x.shape
+#         para = torch.clamp(self.k, min=1.0 ,max=10.0)
+        
+#         mean_rgb = torch.mean(x,[2,3],keepdim=True)
+#         print('222', mean_rgb.shape)
+#         mr,mg, mb = torch.split(mean_rgb, 1, dim=1)
+#         print('333', mr.shape, mg.shape, mb.shape)
+#         Drg = torch.pow(mr-mg, para)
+#         Drb = torch.pow(mr-mb, para)
+#         Dgb = torch.pow(mb-mg, para)
+#         k = torch.pow(torch.pow(Drg, para) + torch.pow(Drb, para) + torch.pow(Dgb, para), 1/para)
+
+#         return k
+# class L_color(nn.Module):
+#     def __init__(self, k):
+#         super(L_color, self).__init__()
+#         self.k = k  # control range (1, +∞)
+
+#     def forward(self, x):
+#         b, c, h, w = x.shape
+#         para = torch.clamp(self.k, min=1.0, max=10.0)
+
+#         mean_rgb = torch.mean(x, [2, 3], keepdim=True)  # [B, C, 1, 1]
+#         mr, mg, mb = torch.split(mean_rgb, 1, dim=1)
+
+#         Drg = torch.pow(torch.abs(mr - mg), para)
+#         Drb = torch.pow(torch.abs(mr - mb), para)
+#         Dgb = torch.pow(torch.abs(mb - mg), para)
+
+#         total = Drg + Drb + Dgb
+#         k = torch.pow(total, 1.0 / para)
+
+#         return k
+class L_color(nn.Module):
+    def __init__(self, k, lambda_sat=0.5):
         super(L_color, self).__init__()
+        self.k = k
+        self.lambda_sat = lambda_sat  
 
     def forward(self, x):
+        
+        mean_rgb = torch.mean(x, [2, 3], keepdim=True)
+        mr, mg, mb = torch.split(mean_rgb, 1, dim=1)
+        
+        Drg = torch.pow(torch.abs(mr - mg), self.k)
+        Drb = torch.pow(torch.abs(mr - mb), self.k)
+        Dgb = torch.pow(torch.abs(mb - mg), self.k)
+        
+        wb_loss = torch.pow(Drg + Drb + Dgb, 1.0/self.k)
+        
+        min_rgb = torch.min(x, dim=1, keepdim=True)[0]
+        mean_rgb_pixel = torch.mean(x, dim=1, keepdim=True)
+        saturation = 1 - (min_rgb / (mean_rgb_pixel + 1e-6))
+        sat_loss = -torch.mean(saturation)  
+        
+        return wb_loss + self.lambda_sat * sat_loss
 
-        b,c,h,w = x.shape
-
-        mean_rgb = torch.mean(x,[2,3],keepdim=True)
-        mr,mg, mb = torch.split(mean_rgb, 1, dim=1)
-        Drg = torch.pow(mr-mg,2)
-        Drb = torch.pow(mr-mb,2)
-        Dgb = torch.pow(mb-mg,2)
-        k = torch.pow(torch.pow(Drg,2) + torch.pow(Drb,2) + torch.pow(Dgb,2),0.5)
-
-        return k
 
 # Exposure Loss, control the generated image exposure
 class L_exp(nn.Module):
