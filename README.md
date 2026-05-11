@@ -15,7 +15,7 @@
 </div>
 </p>
 
-Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment ([Conference Version](https://cuiziteng.github.io/Luminance_GS_web/)
+Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment ([Conference Version](https://cuiziteng.github.io/Luminance_GS_web/))
 
 [Ziteng Cui*<sup>1</sup>](https://cuiziteng.github.io/), 
 [Xuangeng Chu<sup>1</sup>](https://xg-chu.site/), 
