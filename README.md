@@ -15,7 +15,7 @@
 </div>
 </p>
 
-Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment (Conference Version)
+Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions with View-Adaptive Curve Adjustment ([Conference Version](https://cuiziteng.github.io/Luminance_GS_web/)
 
 [Ziteng Cui*<sup>1</sup>](https://cuiziteng.github.io/), 
 [Xuangeng Chu<sup>1</sup>](https://xg-chu.site/), 
@@ -23,14 +23,14 @@ Luminance-GS: Adapting 3D Gaussian Splatting to Challenging Lighting Conditions 
 
 <sup>1.</sup>The University of Tokyo, <sup>2.</sup>RIKEN AIP.
 
-Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis (Journal Version)
+Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis ([Journal Version](https://arxiv.org/pdf/2602.18322))
 
 [Ziteng Cui<sup>1</sup>](https://cuiziteng.github.io/), 
 [Shuhong Liu<sup>1</sup>](https://shuhongll.github.io/)
 [Xiaoyu Dong<sup>1</sup>](https://scholar.google.com/citations?user=gAcwbIkAAAAJ&hl=en)
 [Xuangeng Chu<sup>1</sup>](https://xg-chu.site/), 
 [Lin Gu*<sup>2</sup>](https://sites.google.com/view/linguedu/home)
-[Ming-Hsuan Yang*<sup>3</sup>](https://scholar.google.com/citations?hl=en&user=p9-ohHsAAAAJ)
+[Ming-Hsuan Yang<sup>3</sup>](https://scholar.google.com/citations?hl=en&user=p9-ohHsAAAAJ)
 [Tatsuya Harada<sup>1,4</sup>](https://www.mi.t.u-tokyo.ac.jp/harada/). 
 
 <sup>1.</sup>The University of Tokyo, <sup>2.</sup>Tohoku University, <sup>2.</sup>UC Merced, <sup>4.</sup>RIKEN AIP.
