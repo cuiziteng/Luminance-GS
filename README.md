@@ -33,7 +33,7 @@ Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for 
 [Ming-Hsuan Yang<sup>3</sup>](https://scholar.google.com/citations?hl=en&user=p9-ohHsAAAAJ)
 [Tatsuya Harada<sup>1,4</sup>](https://www.mi.t.u-tokyo.ac.jp/harada/). 
 
-<sup>1.</sup>The University of Tokyo, <sup>2.</sup>Tohoku University, <sup>2.</sup>UC Merced, <sup>4.</sup>RIKEN AIP.
+<sup>1.</sup>The University of Tokyo, <sup>2.</sup>Tohoku University, <sup>3.</sup>UC Merced, <sup>4.</sup>RIKEN AIP.
 
 ### Use The Code:
 
