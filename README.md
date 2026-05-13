@@ -49,7 +49,17 @@ cd Luminance-GS
 	  booktitle={CVPR},
 	  year={2025}}
 ```
-
+```
+@misc{cui2026unifyingcolorlightnesscorrection,
+      title={Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis}, 
+      author={Ziteng Cui and Shuhong Liu and Xiaoyu Dong and Xuangeng Chu and Lin Gu and Ming-Hsuan Yang and Tatsuya Harada},
+      year={2026},
+      eprint={2602.18322},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.18322}, 
+}
+```
 ### Dataset Citation:
 ```
 @inproceedings{cui_aleth_nerf,
