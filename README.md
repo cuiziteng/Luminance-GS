@@ -50,7 +50,7 @@ cd Luminance-GS
 	  year={2025}}
 ```
 ```
-@misc{cui2026unifyingcolorlightnesscorrection,
+@misc{cui_luminance_gs_plus_plus,
       title={Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis}, 
       author={Ziteng Cui and Shuhong Liu and Xiaoyu Dong and Xuangeng Chu and Lin Gu and Ming-Hsuan Yang and Tatsuya Harada},
       year={2026},
